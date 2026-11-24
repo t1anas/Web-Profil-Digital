@@ -120,15 +120,17 @@
     box-shadow:6px 6px 0 #25d36640;transition:.2s}
   .btn-wa:hover{background:var(--wa-dark);transform:translate(-3px,-3px);box-shadow:9px 9px 0 #25d36650}
   .btn-wa svg{width:26px;height:26px;fill:currentColor}
-  .ig-row{margin-top:26px;color:var(--muted);font-size:.95rem}
-  .ig-link{display:inline-flex;align-items:center;gap:8px;margin-left:6px;color:var(--accent);font-weight:600;border-bottom:1px solid transparent;transition:.2s}
-  .ig-link:hover{border-bottom-color:var(--accent)}
-  .ig-link svg{width:20px;height:20px}
+  .cta-row{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;width:fit-content;max-width:100%}
+  .cta-row .btn-wa,.cta-row .btn-ig{justify-content:center;text-align:center;padding:18px 40px;font-size:1.15rem;line-height:1.3;box-sizing:border-box}
+  .btn-ig{display:inline-flex;align-items:center;gap:12px;padding:18px 32px;border-radius:6px;background:var(--accent);color:#2a2c2e;font-size:1.1rem;font-weight:700;box-shadow:6px 6px 0 #fcad0340;transition:.2s}
+  .btn-ig:hover{background:#e39b00;transform:translate(-3px,-3px);box-shadow:9px 9px 0 #fcad0350}
+  .btn-ig svg{width:26px;height:26px}
   footer a{color:var(--accent)}
   footer{padding:22px 0 34px;color:var(--muted);font-family:var(--mono);font-size:.75rem}
 
   /* RESPONSIF */
   @media(max-width:900px){
+    .cta-row{grid-template-columns:1fr;width:100%}
     nav .container{gap:14px}
     nav ul{gap:14px;font-size:.85rem;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
     nav ul::-webkit-scrollbar{display:none}
@@ -166,7 +168,6 @@
       <a href="#contact" class="btn btn-ghost">Hubungi Saya</a>
     </div>
     <div class="photo">
-      <!-- Letakkan foto Anda di folder yang sama dengan nama: foto.jpg -->
       <img src="foto.jpeg" alt="Foto profil Tiana" id="photoImg"
            onerror="this.outerHTML='<div class=&quot;fallback&quot;>T</div>'">
     </div>
@@ -315,15 +316,14 @@
       <div class="label">05 — Kontak</div>
       <h2>Yuk, <em>ngobrol</em> dulu.</h2>
       <p>Ceritakan kebutuhanmu: dokumen yang mau dirapikan atau website yang ingin dibuat. Saya balas lewat WhatsApp.</p>
-      <a id="waBtn" class="btn-wa" href="https://wa.me/6282333006385?text=Halo%20Tiana%2C%20saya%20melihat%20landing%20page%20Anda." target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.200-3.400-8.300zM12 21.700c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.800 1 1-3.700-.2-.4a9.800 9.800 0 0 1-1.500-5.200c0-5.400 4.400-9.800 9.900-9.800 2.600 0 5.100 1 6.900 2.900a9.700 9.700 0 0 1 2.900 6.900c0 5.400-4.400 9.900-9.800 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8 8 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.500 1.100 2.900 1.200 3.100c.1.200 2.100 3.200 5.100 4.500 1.900.8 2.600.9 3.600.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.2-.3-.2-.6-.4z"/></svg>
-        Hubungi Saya via WhatsApp
-      </a>
-      <div class="ig-row">
-        Lihat promo dan contoh hasil kerja di Instagram:
-        <a id="igLink" class="ig-link" href="https://www.instagram.com/cleandocs.id?hvrq=em8zZ2g5N2Jncnhp" target="_blank" rel="noopener">
+      <div class="cta-row">
+        <a id="waBtn" class="btn-wa" href="https://wa.me/6282333006385?text=Halo%20Tiana%2C%20saya%20melihat%20landing%20page%20Anda." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.200-3.400-8.300zM12 21.700c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.800 1 1-3.700-.2-.4a9.800 9.800 0 0 1-1.500-5.200c0-5.400 4.400-9.800 9.900-9.800 2.600 0 5.100 1 6.900 2.900a9.700 9.700 0 0 1 2.900 6.900c0 5.400-4.400 9.900-9.800 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8 8 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.500 1.100 2.900 1.200 3.100c.1.200 2.100 3.200 5.100 4.500 1.900.8 2.600.9 3.600.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.2-.3-.2-.6-.4z"/></svg>
+          Hubungi Saya via WhatsApp
+        </a>
+        <a id="igLink" class="btn-ig" href="https://www.instagram.com/cleandocs.id?hvrq=em8zZ2g5N2Jncnhp" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          <span id="igText">@cleandocs.id</span>
+          Ikuti di Instagram
         </a>
       </div>
     </section>
@@ -332,10 +332,10 @@
   </main>
 
 <script>
-  const NAMA_LENGKAP = "Arsyil Fiqih Seftiana";             
+  const NAMA_LENGKAP = "Arsyil Fiqih Seftiana";              
   const NOMOR_WA     = "6282333006385";      
   const USERNAME_IG  = "cleandocs.id";      
-  const PESAN_AWAL   = "Halo Tiana, saya melihat landing page Anda dan ingin menggunakan jasa cleandocs.id";
+  const PESAN_AWAL   = "Halo Tiana, saya melihat landing page Anda dan ingin berdiskusi.";
 
   document.getElementById("heroName").textContent = NAMA_LENGKAP;
   document.getElementById("navName").textContent  = NAMA_LENGKAP.split(" ")[0];
@@ -347,7 +347,6 @@
   });
   document.getElementById("igLink").href = "https://www.instagram.com/cleandocs.id?hvrq=em8zZ2g5N2Jncnhp" + USERNAME_IG;
   document.getElementById("igFoot").href = "https://www.instagram.com/cleandocs.id?hvrq=em8zZ2g5N2Jncnhp" + USERNAME_IG;
-  document.getElementById("igText").textContent = "@" + USERNAME_IG;
   document.getElementById("waBtn").href =
     "https://wa.me/" + NOMOR_WA + "?text=" + encodeURIComponent(PESAN_AWAL);
 </script>
